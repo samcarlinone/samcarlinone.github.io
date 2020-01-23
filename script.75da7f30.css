@@ -548,25 +548,47 @@ button {
   background-color: #fff;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   padding: 0 32px;
-  max-width: 34rem;
+  position: relative;
 }
 @media (max-width: 860px) {
   .article-card {
     padding: 0 16px;
     padding-bottom: 16px;
+    max-width: calc(100vw - 64px);
   }
 }
-.article-card table {
+.article-card > table {
   width: 100%;
 }
-.article-card table th {
+.article-card > table th {
   border-bottom: 1px solid #eee;
 }
-.article-card img {
+.article-card > img {
   max-width: 100%;
 }
-.article-card p {
+.article-card > p {
   line-height: 1.45rem;
+  max-width: 34rem;
+}
+.article-card > p code {
+  background-color: #f0f0f0;
+}
+.article-card .math {
+  position: relative;
+}
+.article-card .math > p {
+  max-width: 100%;
+  overflow: auto;
+}
+.article-card .math::after {
+  box-shadow: inset -10px 0px 6px -8px white;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
 }
 
 .mobile-sidebar {
