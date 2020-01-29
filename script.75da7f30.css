@@ -590,6 +590,28 @@ button {
   right: 0;
   pointer-events: none;
 }
+.article-card span + pre {
+  position: relative;
+}
+.article-card span + pre::after {
+  content: "Spoiler";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 0px 14px -6px black inset;
+  pointer-events: none;
+}
+.article-card span + pre:hover::after {
+  background-color: transparent;
+  color: transparent;
+  box-shadow: none;
+}
 
 .mobile-sidebar {
   width: 100vw;
